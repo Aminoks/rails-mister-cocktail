@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-offset-sm-3 col-sm-6">
+      <h1>Cocktails</h1>
+      <ul>
+        <% @cocktails.each do |r| %>
+        <li>
+          <%= link_to r.name , cocktail_path(r) %>
+        </li>
+      <% end %>
+      </ul>
+      <%= link_to "Add new cocktail", new_cocktail_path %>
+    </div>
+  </div>
+</div>

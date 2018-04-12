@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+      <h1><%= @cocktail.name %></h1>
+      <ul>
+        <% @cocktail.doses.each do |r| %>
+        <li>
+          <%= r.description %> --
+          <%= r.ingredient.name %> --
+          <%= link_to "Delete", dose_path(r), method: :delete  %>
+        </li>
+        <% end %>
+      </ul>
+      <p>
+        <%= link_to 'add ingredient', new_cocktail_dose_path(@cocktail) %>
+      </p>
+    </div>
+  </div>
+</div>
