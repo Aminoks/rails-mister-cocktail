@@ -14,7 +14,7 @@
         <li>
           <%= r.ingredient.name %> ||
           <%= r.description %>
-          <%= link_to "Delete", dose_path(r), method: :delete  %>
+          <%= link_to "Delete", dose_path(r), method: :delete, data: { confirm: "Are you sure?" }  %>
         </li>
         <% end %>
    </div>

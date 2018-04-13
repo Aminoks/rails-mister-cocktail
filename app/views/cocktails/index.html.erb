@@ -3,13 +3,15 @@
   <div class="row">
     <div class="col-xs-12 col-offset-sm-3 col-sm-6">
       <h1>Cocktails</h1>
-      <%= link_to "Add new cocktail", new_cocktail_path %>
+    </div>
+    <div class="col-xs-12 col-offset-sm-3 col-sm-6 text-right">
+      <%= link_to "Add new cocktail", new_cocktail_path,  class: "btn btn-primary" %>
     </div>
   </div>
   <div class="row">
     <% @cocktails.each do |r| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path r.photo, height: 300, width: 400, crop: :fill %>');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path r.photo, crop: :fill %>');">
         <div class="card-description">
           <h2><%= r.name %></h2>
         </div>

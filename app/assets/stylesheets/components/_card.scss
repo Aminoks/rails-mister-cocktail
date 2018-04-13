@@ -5,8 +5,10 @@
   background-position: center;
   color: white;
   position: relative;
-  margin-bottom: 30px;
+  margin: 15px 0;
   border-radius: 3px;
+  max-height: 100vh;
+  max-width: 100vh;
 }
 .card-user {
   position: absolute;
@@ -48,8 +50,9 @@
 .card-link:hover {
   opacity: 0.1;
 }
-body {
-  background: linear-gradient(110deg, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
-  color: white;
+.btn {
+  margin-top: 30px;
 }
+
+
 
