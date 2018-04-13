@@ -3,14 +3,20 @@
   <div class="row">
     <div class="col-xs-12 col-offset-sm-3 col-sm-6">
       <h1>Cocktails</h1>
-      <ul>
-        <% @cocktails.each do |r| %>
-        <li>
-          <%= link_to r.name , cocktail_path(r) %>
-        </li>
-      <% end %>
-      </ul>
       <%= link_to "Add new cocktail", new_cocktail_path %>
     </div>
   </div>
+  <div class="row">
+    <% @cocktails.each do |r| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://d32miag6ta013h.cloudfront.net/grey_goose/en-us/17436/small/525x525_roman-cosmo-martini-cocktail.jpg');">
+        <div class="card-description">
+          <h2><%= r.name %></h2>
+        </div>
+        <%= link_to "" , cocktail_path(r), class: "card-link" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
+
