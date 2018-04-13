@@ -9,7 +9,7 @@
   <div class="row">
     <% @cocktails.each do |r| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://d32miag6ta013h.cloudfront.net/grey_goose/en-us/17436/small/525x525_roman-cosmo-martini-cocktail.jpg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path r.photo, height: 300, width: 400, crop: :fill %>');">
         <div class="card-description">
           <h2><%= r.name %></h2>
         </div>

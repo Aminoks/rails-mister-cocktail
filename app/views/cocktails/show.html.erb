@@ -1,18 +1,22 @@
 <div class="container">
+  <h1><%= @cocktail.name %></h1>
+   <p>
+        <%= link_to 'add ingredient', new_cocktail_dose_path(@cocktail) %>
+      </p>
   <div class="row">
-    <div class="col-xs-12 col-sm-offset-3 col-sm-6">
-      <h1><%= @cocktail.name %></h1>
-      <ul>
+    <div class="col-xs-12  col-sm-6">
+      <div class="card" style="height: 300px; background-image:  url('<%= cl_image_path @cocktail.photo, crop: :fill %>'); background-image: cover;">
+      </div>
+    </div>
+   <div class="col-xs-12  col-sm-6">
+    <ul>
         <% @cocktail.doses.each do |r| %>
         <li>
-          <%= r.description %> --
-          <%= r.ingredient.name %> --
+          <%= r.ingredient.name %> ||
+          <%= r.description %>
           <%= link_to "Delete", dose_path(r), method: :delete  %>
         </li>
         <% end %>
-      <p>
-        <%= link_to 'add ingredient', new_cocktail_dose_path(@cocktail) %>
-      </p>
-    </div>
+   </div>
   </div>
 </div>
